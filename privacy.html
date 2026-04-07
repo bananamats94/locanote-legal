@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutzerklärung – LocaNote</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #e2e8f0;
+            --panel: #111827;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #1e293b;
+            --shadow: 0 20px 45px rgba(15, 23, 42, 0.55);
+            --toggle: rgba(226, 232, 240, 0.3);
+        }
+        :root[data-theme="light"] {
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --panel: #ffffff;
+            --muted: #475569;
+            --accent: #3b82f6;
+            --border: #e2e8f0;
+            --shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+            --toggle: rgba(15, 23, 42, 0.1);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            padding: 40px 20px;
+        }
+        .page { max-width: 900px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        header h1 { font-size: 32px; margin: 0; }
+        header p { color: var(--muted); margin: 6px 0 0; }
+        .toggle { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 999px; padding: 6px 18px; cursor: pointer; font-size: 13px; }
+        section { background: var(--panel); border: 1px solid var(--border); border-radius: 20px; padding: 26px; margin-bottom: 18px; box-shadow: var(--shadow); }
+        h2 { margin-top: 0; color: var(--accent); font-size: 20px; }
+        p, li { line-height: 1.7; color: var(--muted); }
+        ul { padding-left: 20px; }
+        .footer { text-align: center; margin-top: 32px; color: var(--muted); font-size: 14px; }
+        .impressum-link { color: var(--accent); font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div>
+                <h1>Datenschutzerkl&auml;rung</h1>
+                <p>LocaNote &ndash; April 2026</p>
+            </div>
+            <button class="toggle" id="toggle">Hell</button>
+        </header>
+
+        <section>
+            <h2>1. Verantwortlicher</h2>
+            <p>CodeCraft &middot; Matthias Steins<br>
+            Stationsweg 69 &middot; 41068 M&ouml;nchengladbach &middot; Deutschland<br>
+            E-Mail: <a href="mailto:support@codecraftcom.de" class="impressum-link">support@codecraftcom.de</a></p>
+        </section>
+
+        <section>
+            <h2>2. Erhobene Daten</h2>
+            <ul>
+                <li>Technische Metadaten (Ger&auml;temodell, iOS-Version, App-Version)</li>
+                <li>Absturzberichte und Diagnosen (Apple Crash Reports)</li>
+                <li>App-Inhalte (Orte, Aufgaben, Notizen, Fotos, Sprachnotizen) verbleiben lokal auf deinem Ger&auml;t</li>
+                <li>Optional: Synchronisierung deiner Daten in deine eigene iCloud (kein Zugriff durch uns)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Standort &amp; Geofencing</h2>
+            <p>LocaNote ist eine ortsbasierte App. Standortdaten werden ausschlie&szlig;lich auf deinem Ger&auml;t verarbeitet, um dir Erinnerungen an deinen gespeicherten Orten anzubieten.</p>
+            <ul>
+                <li><strong>"Bei Nutzung":</strong> Wird verwendet um die Karte zu zentrieren und Orte in deiner N&auml;he anzuzeigen</li>
+                <li><strong>"Immer":</strong> Wird ben&ouml;tigt damit Geofence-Erinnerungen funktionieren wenn die App geschlossen ist (z.B. "Erinnere mich an Milch wenn ich beim Aldi bin")</li>
+            </ul>
+            <p><strong>Wichtig:</strong> Standortdaten werden niemals an unsere Server &uuml;bertragen. Die Geofence-Verarbeitung erfolgt vollst&auml;ndig auf deinem iPhone durch das iOS Location Framework.</p>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) &ndash; du kannst die Berechtigung jederzeit in den iOS-Einstellungen widerrufen.</p>
+        </section>
+
+        <section>
+            <h2>4. iCloud Sync (optional)</h2>
+            <p>Wenn du iCloud Sync in den App-Einstellungen aktivierst, werden deine Orte, Aufgaben und Listen &uuml;ber Apples CloudKit-Service zwischen deinen eigenen Apple-Ger&auml;ten synchronisiert.</p>
+            <ul>
+                <li>Die Daten werden in deine pers&ouml;nliche iCloud-Datenbank gespeichert</li>
+                <li>Wir haben <strong>keinen Zugriff</strong> auf diese Daten</li>
+                <li>Apple ist verantwortlich f&uuml;r Speicherung und Verschl&uuml;sselung</li>
+                <li>Du kannst iCloud Sync jederzeit in den App-Einstellungen oder iOS-Einstellungen deaktivieren</li>
+            </ul>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+        </section>
+
+        <section>
+            <h2>5. Partner-Modus &amp; geteilte Karten</h2>
+            <p>Wenn du den Partner-Modus aktivierst und einen oder mehrere Partner einl&auml;dst, werden deine Orte und Aufgaben &uuml;ber Apples <strong>CloudKit Shared Database</strong> mit den eingeladenen Personen geteilt.</p>
+            <ul>
+                <li>Die Synchronisation erfolgt End-to-End &uuml;ber Apple iCloud &ndash; nicht &uuml;ber unsere Server</li>
+                <li>Geteilt werden: Name des Orts, Koordinaten, Symbol, Farbe, Kategorie, Notiz, Bewertung, Foto, Aufgaben, Checklisten, Kommentare, Sprachnotizen</li>
+                <li>Live-Pins (Standort teilen mit Label) werden nach 4 Stunden automatisch gel&ouml;scht</li>
+                <li>Wenn du einen Partner trennst, wird die geteilte CloudKit-Zone gel&ouml;scht</li>
+                <li>Bis zu 5 Partner k&ouml;nnen gleichzeitig verbunden sein</li>
+            </ul>
+            <p><strong>Pro-Sponsor-Modell:</strong> Wenn du LocaNote Pro abonniert hast, k&ouml;nnen deine eingeladenen Partner alle Pro-Features kostenlos nutzen, solange dein Abo aktiv ist. Beim K&uuml;ndigen verlieren die Partner den Pro-Status wieder.</p>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) &ndash; das Teilen erfordert eine aktive Einladung durch dich.</p>
+        </section>
+
+        <section>
+            <h2>6. Kalender-Integration (optional)</h2>
+            <p>Wenn du die Kalender-Integration aktivierst, werden Aufgaben mit F&auml;lligkeitsdatum als Termine in einen eigenen <strong>"LocaNote"</strong>-Kalender geschrieben. Dieser Kalender wird in deinem iCloud- oder lokalen Kalender erstellt.</p>
+            <ul>
+                <li>Wir verwenden Apples EventKit-Framework f&uuml;r den Kalender-Zugriff</li>
+                <li>Es werden nur Daten geschrieben, die du in der App angelegt hast</li>
+                <li>Wir lesen keine fremden Kalendereintr&auml;ge</li>
+                <li>Du kannst die Berechtigung jederzeit in den iOS-Einstellungen widerrufen</li>
+            </ul>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+        </section>
+
+        <section>
+            <h2>7. Wetter-Daten (WeatherKit)</h2>
+            <p>F&uuml;r die wetterbasierten Empfehlungen ("Bei Regen ein Caf&eacute;") nutzt LocaNote Apples WeatherKit-Service. Dabei werden deine ungef&auml;hren Koordinaten an Apple &uuml;bermittelt, um aktuelle Wetterdaten abzurufen. Apple verarbeitet diese Anfragen gem&auml;&szlig; eigener Datenschutzrichtlinien und l&ouml;scht standortbezogene Anfragen nach kurzer Zeit.</p>
+            <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) &ndash; Bereitstellung kontextueller Empfehlungen.</p>
+        </section>
+
+        <section>
+            <h2>8. Mikrofon &amp; Sprachnotizen</h2>
+            <p>Wenn du eine Sprachnotiz f&uuml;r einen Ort aufnimmst, wird das Audio lokal auf deinem Ger&auml;t aufgenommen und nur lokal gespeichert. Bei aktivem iCloud Sync oder Partner-Modus wird die Audiodatei verschl&uuml;sselt &uuml;ber Apple iCloud synchronisiert.</p>
+            <p>Es findet keine Spracherkennung oder serverseitige Verarbeitung statt. Wir hosten keine Sprachdaten.</p>
+            <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
+        </section>
+
+        <section>
+            <h2>9. Externe Dienste</h2>
+            <ul>
+                <li><strong>Apple iCloud / CloudKit:</strong> Datensynchronisation, Partner-Modus, geteilte Listen (nur bei aktiver Nutzung)</li>
+                <li><strong>Apple WeatherKit:</strong> Wetter-Empfehlungen basierend auf Standort</li>
+                <li><strong>Apple StoreKit:</strong> In-App-K&auml;ufe und Abonnements (LocaNote Pro)</li>
+                <li><strong>Apple MapKit:</strong> Kartendarstellung, POI-Suche, Routing &ndash; vollst&auml;ndig auf Apples Infrastruktur</li>
+                <li><strong>Apple ML / Vision (On-Device):</strong> Lokale Datumserkennung in Aufgabenttexten &ndash; keine Netzwerkkommunikation</li>
+            </ul>
+            <p><strong>Wir betreiben keine eigenen Server</strong> und nutzen kein eigenes Backend. S&auml;mtliche Cloud-Funktionen laufen &uuml;ber Apple-Infrastruktur. Wir haben keinen Zugriff auf deine Daten.</p>
+        </section>
+
+        <section>
+            <h2>10. Werbung &amp; Analytics</h2>
+            <p>LocaNote enth&auml;lt <strong>keine Werbung</strong>, keine Werbe-Tracker und kein Drittanbieter-Analytics. Wir verwenden nur Apples Standard-Crashreports (Apple Diagnostics &amp; Usage), die anonym sind und nur mit deiner ausdr&uuml;cklichen iOS-Einwilligung &uuml;bertragen werden.</p>
+        </section>
+
+        <section>
+            <h2>11. Zweck</h2>
+            <p>Daten werden ausschlie&szlig;lich zur Bereitstellung der App-Funktionen verwendet. Es erfolgt keine Weitergabe an Werbetreibende oder Dritte. Es findet kein Profiling statt. Es gibt kein Server-Backend in unserer Hand.</p>
+        </section>
+
+        <section>
+            <h2>12. Deine Rechte</h2>
+            <ul>
+                <li>Auskunft &uuml;ber gespeicherte Daten anfordern (Art. 15 DSGVO)</li>
+                <li>Daten l&ouml;schen lassen durch App-Deinstallation (alle lokalen Daten werden gel&ouml;scht)</li>
+                <li>iCloud-Daten &uuml;ber die iCloud-Einstellungen l&ouml;schen (Apple-verwaltet)</li>
+                <li>Widerspruch gegen Datenverarbeitung einlegen (Art. 21 DSGVO)</li>
+                <li>Daten&uuml;bertragbarkeit &uuml;ber die Export-Funktion in der App (Art. 20 DSGVO)</li>
+                <li>Beschwerde bei der zust&auml;ndigen Aufsichtsbeh&ouml;rde einreichen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>13. Impressum</h2>
+            <p><a href="imprint.html" class="impressum-link">Impressum &raquo;</a></p>
+        </section>
+
+        <div class="footer">&copy; 2026 CodeCraft &middot; LocaNote</div>
+    </div>
+    <script>
+        (function(){
+            const root = document.documentElement;
+            const btn = document.getElementById('toggle');
+            const stored = localStorage.getItem('site-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const initial = stored || (prefersDark ? 'dark' : 'light');
+            root.dataset.theme = initial === 'dark' ? '' : 'light';
+            btn.textContent = initial === 'dark' ? 'Hell' : 'Dunkel';
+            btn.addEventListener('click', () => {
+                const next = root.dataset.theme === '' ? 'light' : 'dark';
+                root.dataset.theme = next === 'dark' ? '' : 'light';
+                localStorage.setItem('site-theme', next);
+                btn.textContent = next === 'dark' ? 'Hell' : 'Dunkel';
+            });
+        })();
+    </script>
+</body>
+</html>

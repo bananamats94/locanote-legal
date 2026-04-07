@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocaNote – Legal</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --text: #e2e8f0;
+            --panel: #111827;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #1e293b;
+            --shadow: 0 20px 45px rgba(15, 23, 42, 0.55);
+        }
+        :root[data-theme="light"] {
+            --bg: #f8fafc;
+            --text: #0f172a;
+            --panel: #ffffff;
+            --muted: #475569;
+            --accent: #3b82f6;
+            --border: #e2e8f0;
+            --shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', system-ui, sans-serif;
+            padding: 60px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .page { max-width: 600px; width: 100%; text-align: center; }
+        .logo {
+            width: 88px; height: 88px;
+            margin: 0 auto 24px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.35);
+        }
+        h1 { font-size: 36px; margin: 0 0 8px; }
+        p.tag { color: var(--muted); margin: 0 0 36px; font-size: 16px; }
+        .links { display: grid; gap: 12px; }
+        .link-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            box-shadow: var(--shadow);
+            transition: transform 0.15s ease;
+        }
+        .link-card:hover { transform: translateY(-2px); }
+        .link-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            background: var(--accent);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+        .link-text { text-align: left; }
+        .link-text strong { display: block; font-size: 16px; }
+        .link-text span { color: var(--muted); font-size: 13px; }
+        .footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+        .footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="logo">📍</div>
+        <h1>LocaNote</h1>
+        <p class="tag">Rechtliche Informationen</p>
+
+        <div class="links">
+            <a class="link-card" href="privacy.html">
+                <div class="link-icon">🔒</div>
+                <div class="link-text">
+                    <strong>Datenschutzerklärung</strong>
+                    <span>Wie wir mit deinen Daten umgehen</span>
+                </div>
+            </a>
+            <a class="link-card" href="terms.html">
+                <div class="link-icon">📄</div>
+                <div class="link-text">
+                    <strong>Nutzungsbedingungen</strong>
+                    <span>Rechtliche Rahmenbedingungen</span>
+                </div>
+            </a>
+            <a class="link-card" href="imprint.html">
+                <div class="link-icon">🏢</div>
+                <div class="link-text">
+                    <strong>Impressum</strong>
+                    <span>Anbieter & Kontakt</span>
+                </div>
+            </a>
+        </div>
+
+        <p class="footer">
+            © 2026 CodeCraft · LocaNote<br>
+            <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutzungsbedingungen – LocaNote</title>
+    <style>
+        :root {
+            --bg: #111827;
+            --text: #f8fafc;
+            --panel: #1f2937;
+            --muted: #cbd5e1;
+            --accent: #38bdf8;
+            --border: #273449;
+            --shadow: 0 20px 45px rgba(15, 23, 42, 0.65);
+        }
+        :root[data-theme="light"] {
+            --bg: #fdfdfd;
+            --text: #0f172a;
+            --panel: #ffffff;
+            --muted: #475569;
+            --accent: #3b82f6;
+            --border: #e2e8f0;
+            --shadow: 0 15px 30px rgba(15, 23, 42, 0.1);
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; padding: 40px 20px; min-height: 100vh; }
+        .page { max-width: 920px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        h1 { margin: 0; font-size: 32px; }
+        header p { color: var(--muted); margin: 6px 0 0; }
+        .toggle { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 999px; padding: 6px 18px; cursor: pointer; font-size: 13px; }
+        article { background: var(--panel); border: 1px solid var(--border); border-radius: 20px; padding: 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+        h2 { margin-top: 0; color: var(--accent); }
+        p, li { line-height: 1.7; color: var(--muted); }
+        ul { padding-left: 20px; }
+        a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .footer { text-align: center; margin-top: 28px; color: var(--muted); font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div>
+                <h1>Nutzungsbedingungen</h1>
+                <p>G&uuml;ltig ab April 2026 &middot; LocaNote</p>
+            </div>
+            <button class="toggle" id="toggle">Hell</button>
+        </header>
+
+        <article>
+            <h2>1. Geltungsbereich</h2>
+            <p>Diese Nutzungsbedingungen gelten f&uuml;r LocaNote und alle zugeh&ouml;rigen Dienste, einschlie&szlig;lich optionaler Cloud-Synchronisation, Partner-Modus, Sprachnotizen, Wetterfunktionen und Premium-Abonnements.</p>
+        </article>
+
+        <article>
+            <h2>2. Leistungen</h2>
+            <ul>
+                <li>Verwaltung von Aufgaben, Listen, Checklisten und Erinnerungen</li>
+                <li>Kartenbasierte Speicherung von Orten mit Notizen, Fotos, Bewertungen und Sprachnotizen</li>
+                <li>Geofence-basierte Erinnerungen ("Erinnere mich wenn ich beim Aldi bin")</li>
+                <li>Optionale iCloud-Synchronisation zwischen deinen eigenen Apple-Ger&auml;ten</li>
+                <li>Optionaler Partner-Modus zum Teilen von Karten und Aufgaben mit bis zu 5 Personen</li>
+                <li>Optionale Kalender-Integration (eigener LocaNote-Kalender)</li>
+                <li>Wetterbasierte Empfehlungen, Smart Routing, Place Goals (Pro)</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>3. Keine Rechts- oder Steuerberatung</h2>
+            <p>LocaNote ist eine pers&ouml;nliche Organisations- und Karten-App. Sie ersetzt weder rechtliche, medizinische, finanzielle noch sicherheitsrelevante Beratung. Erinnerungen und Routenplanungen sind unverbindlich und ohne Gew&auml;hr.</p>
+        </article>
+
+        <article>
+            <h2>4. Standortbasierte Funktionen</h2>
+            <p>F&uuml;r Geofence-Erinnerungen und Live-Standortteilung im Partner-Modus ben&ouml;tigt LocaNote Standortzugriff. Du kannst diesen jederzeit in den iOS-Einstellungen widerrufen. Beachte, dass standortbasierte Erinnerungen ohne Hintergrundzugriff nicht funktionieren k&ouml;nnen.</p>
+        </article>
+
+        <article>
+            <h2>5. Pflichten des Nutzers</h2>
+            <ul>
+                <li>Du bist daf&uuml;r verantwortlich, deine Aufgaben und Erinnerungen selbstst&auml;ndig zu pr&uuml;fen und nicht ausschlie&szlig;lich auf Push-Benachrichtigungen zu vertrauen.</li>
+                <li>Beim Teilen von Orten mit Partnern bist du daf&uuml;r verantwortlich, dass du dazu berechtigt bist (insbesondere bei Bildern oder fremden Adressen).</li>
+                <li>Sprachnotizen d&uuml;rfen nur deine eigene Stimme oder die anderer einwilligender Personen enthalten.</li>
+                <li>Die App darf nicht zum Stalking, zur unrechtm&auml;&szlig;igen Standortverfolgung anderer oder zu illegalen Zwecken genutzt werden.</li>
+                <li>Du bist f&uuml;r den Schutz exportierter Dateien und Backups verantwortlich.</li>
+            </ul>
+        </article>
+
+        <article>
+            <h2>6. Partner-Modus</h2>
+            <p>Beim Partner-Modus werden Daten &uuml;ber Apple iCloud (CloudKit) zwischen den verbundenen Personen synchronisiert. Du bist daf&uuml;r verantwortlich, wem du Zugang gibst. Beim Trennen einer Partnerschaft werden geteilte CloudKit-Daten auf bestm&ouml;gliche Weise gel&ouml;scht; Apple synchronisiert die L&ouml;schung in der Regel innerhalb weniger Minuten.</p>
+            <p><strong>Pro-Sponsor-Modell:</strong> Bei aktivem LocaNote Pro Abonnement sponserst du bis zu 5 Partner mit allen Pro-Features. Beim K&uuml;ndigen oder Ablauf deines Abos verlieren die Partner den Pro-Status. Partner k&ouml;nnen ihren eigenen Pro-Account erwerben um die Features weiter zu nutzen.</p>
+        </article>
+
+        <article>
+            <h2>7. K&auml;ufe &amp; Abonnements</h2>
+            <p>LocaNote Pro wird als Auto-Renewable Subscription &uuml;ber den Apple App Store abgerechnet. Es gelten zus&auml;tzlich Apples Standard-Bedingungen. Abonnements verl&auml;ngern sich automatisch, sofern sie nicht mindestens 24 Stunden vor Ablaufende in den iOS-Einstellungen gek&uuml;ndigt werden.</p>
+            <p><strong>Free Trial:</strong> Bei aktivem 7-Tage Free Trial kannst du das Abo jederzeit innerhalb der Trial-Periode kostenlos in den iOS-Einstellungen k&uuml;ndigen. Ohne K&uuml;ndigung wird der Trial automatisch in ein bezahltes Abo umgewandelt.</p>
+        </article>
+
+        <article>
+            <h2>8. Haftung</h2>
+            <p>Die Haftung ist auf das gesetzlich zul&auml;ssige Ma&szlig; beschr&auml;nkt. Wir haften nicht f&uuml;r:</p>
+            <ul>
+                <li>Verpasste Erinnerungen aufgrund von iOS-Beschr&auml;nkungen, Hintergrund-Restriktionen oder GPS-Ungenauigkeit</li>
+                <li>Datenverlust durch fehlerhafte iCloud-Synchronisation (Apple-verantwortet)</li>
+                <li>Indirekte Sch&auml;den, Folgesch&auml;den oder entgangenen Gewinn</li>
+                <li>Kommunikationsfehler im Partner-Modus zwischen Personen</li>
+            </ul>
+            <p>Die Nutzung der App und ihrer Ergebnisse erfolgt auf eigene Verantwortung.</p>
+        </article>
+
+        <article>
+            <h2>9. &Auml;nderungen</h2>
+            <p>Funktionen und diese Bedingungen k&ouml;nnen sich &auml;ndern. Es gilt jeweils die aktuell ver&ouml;ffentlichte Fassung. Wesentliche &Auml;nderungen werden in der App angek&uuml;ndigt.</p>
+        </article>
+
+        <article>
+            <h2>10. Kontakt</h2>
+            <p>
+                E-Mail: <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a><br>
+                <a href="privacy.html">Datenschutzerkl&auml;rung</a> &middot; <a href="imprint.html">Impressum</a>
+            </p>
+        </article>
+
+        <div class="footer">&copy; 2026 CodeCraft &middot; LocaNote</div>
+    </div>
+
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const btn = document.getElementById('toggle');
+            const stored = localStorage.getItem('locanote-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const current = stored || (prefersDark ? 'dark' : 'light');
+            root.dataset.theme = current === 'dark' ? '' : 'light';
+            btn.textContent = current === 'dark' ? 'Hell' : 'Dunkel';
+            btn.addEventListener('click', () => {
+                const next = root.dataset.theme === '' ? 'light' : 'dark';
+                root.dataset.theme = next === 'dark' ? '' : 'light';
+                localStorage.setItem('locanote-theme', next);
+                btn.textContent = next === 'dark' ? 'Hell' : 'Dunkel';
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impressum – LocaNote</title>
+    <style>
+        :root {
+            --bg: #e2e8f0;
+            --text: #0f172a;
+            --card: #ffffff;
+            --muted: #475569;
+            --accent: #3b82f6;
+            --border: #cbd5e1;
+            --shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+        }
+        :root[data-theme="dark"] {
+            --bg: #030712;
+            --text: #e5e7eb;
+            --card: #111827;
+            --muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #1f2937;
+            --shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+        }
+        * { box-sizing: border-box; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, sans-serif; padding: 40px 20px; }
+        .page { max-width: 820px; margin: 0 auto; }
+        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+        h1 { margin: 0; font-size: 32px; }
+        header p { margin: 6px 0 0; color: var(--muted); }
+        .toggle { border: 1px solid var(--border); border-radius: 999px; padding: 6px 18px; background: var(--card); color: var(--text); cursor: pointer; }
+        .card { background: var(--card); border-radius: 20px; border: 1px solid var(--border); padding: 24px; margin-bottom: 16px; box-shadow: var(--shadow); }
+        h2 { color: var(--accent); margin-top: 0; }
+        p { line-height: 1.7; color: var(--muted); margin: 0; }
+        a { color: var(--accent); text-decoration: none; font-weight: 600; }
+        .links { display: flex; gap: 12px; flex-wrap: wrap; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div>
+                <h1>Impressum</h1>
+                <p>LocaNote &middot; CodeCraft</p>
+            </div>
+            <button class="toggle" id="toggle">Hell</button>
+        </header>
+
+        <div class="card">
+            <h2>Anbieter</h2>
+            <p>
+                CodeCraft &middot; Matthias Steins<br>
+                Stationsweg 69<br>
+                41068 M&ouml;nchengladbach<br>
+                Deutschland
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Kontakt</h2>
+            <p>
+                E-Mail: <a href="mailto:support@codecraftcom.de">support@codecraftcom.de</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Inhaltlich verantwortlich</h2>
+            <p>Matthias Steins, Anschrift wie oben.</p>
+        </div>
+
+        <div class="card">
+            <h2>Rechtliche Seiten</h2>
+            <div class="links">
+                <a href="privacy.html">Datenschutzerkl&auml;rung</a>
+                <a href="terms.html">Nutzungsbedingungen</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            const root = document.documentElement;
+            const btn = document.getElementById('toggle');
+            const stored = localStorage.getItem('locanote-theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const current = stored || (prefersDark ? 'dark' : 'light');
+            root.dataset.theme = current === 'dark' ? 'dark' : '';
+            btn.textContent = current === 'dark' ? 'Hell' : 'Dunkel';
+            btn.addEventListener('click', () => {
+                const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+                root.dataset.theme = next === 'dark' ? 'dark' : '';
+                localStorage.setItem('locanote-theme', next);
+                btn.textContent = next === 'dark' ? 'Hell' : 'Dunkel';
+            });
+        })();
+    </script>
+</body>
+</html>
