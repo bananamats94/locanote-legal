@@ -52,7 +52,7 @@
         <header>
             <div>
                 <h1>Datenschutzerkl&auml;rung</h1>
-                <p>LocaNote &ndash; April 2026</p>
+                <p>LocaNote &ndash; Stand: August 2026</p>
             </div>
             <button class="toggle" id="toggle">Hell</button>
         </header>
@@ -76,12 +76,14 @@
 
         <section>
             <h2>3. Standort &amp; Geofencing</h2>
-            <p>LocaNote ist eine ortsbasierte App. Standortdaten werden ausschlie&szlig;lich auf deinem Ger&auml;t verarbeitet, um dir Erinnerungen an deinen gespeicherten Orten anzubieten.</p>
+            <p>LocaNote ist eine ortsbasierte App. Dein Standort wird auf deinem Ger&auml;t verarbeitet, um dir Erinnerungen an deinen gespeicherten Orten anzubieten. Eine einzige Ausnahme betrifft die &Ouml;ffnungszeiten-Abfrage &ndash; sie ist unten beschrieben und abschaltbar.</p>
             <ul>
                 <li><strong>"Bei Nutzung":</strong> Wird verwendet um die Karte zu zentrieren und Orte in deiner N&auml;he anzuzeigen</li>
                 <li><strong>"Immer":</strong> Wird ben&ouml;tigt damit Geofence-Erinnerungen funktionieren wenn die App geschlossen ist (z.B. "Erinnere mich an Milch wenn ich beim Aldi bin")</li>
             </ul>
-            <p><strong>Wichtig:</strong> Standortdaten werden niemals an unsere Server &uuml;bertragen. Die Geofence-Verarbeitung erfolgt vollst&auml;ndig auf deinem iPhone durch das iOS Location Framework.</p>
+            <p><strong>Wichtig:</strong> Dein <em>aktueller</em> Standort verl&auml;sst dein Ger&auml;t nicht. Die Geofence-Verarbeitung erfolgt vollst&auml;ndig auf deinem iPhone durch das iOS Location Framework. Wir betreiben keine eigenen Server und empfangen keine Standortdaten.</p>
+            <p><strong>Eine Ausnahme &ndash; &Ouml;ffnungszeiten:</strong> Damit LocaNote &Ouml;ffnungszeiten und Leerungszeiten zu einem Ort anzeigen kann, fragt die App diese bei OpenStreetMap ab. Dabei wird die <em>gespeicherte Koordinate dieses Ortes</em> zusammen mit einem Suchradius von 60&nbsp;Metern an <code>overpass-api.de</code> gesendet. Nicht &uuml;bertragen werden: dein aktueller Standort, der Name des Ortes, deine Aufgaben oder eine Kennung deines Ger&auml;ts. Die IP-Adresse ist f&uuml;r den Server technisch unvermeidbar sichtbar.</p>
+            <p>Diese Abfrage l&auml;sst sich vollst&auml;ndig abschalten: <strong>Mehr &rarr; Datenquellen</strong>. Danach findet keinerlei Kommunikation mit OpenStreetMap statt; &Ouml;ffnungszeiten k&ouml;nnen weiterhin von Hand eingetragen werden.</p>
             <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) &ndash; du kannst die Berechtigung jederzeit in den iOS-Einstellungen widerrufen.</p>
         </section>
 
@@ -98,16 +100,18 @@
         </section>
 
         <section>
-            <h2>5. Partner-Modus &amp; geteilte Karten</h2>
-            <p>Wenn du den Partner-Modus aktivierst und einen oder mehrere Partner einl&auml;dst, werden deine Orte und Aufgaben &uuml;ber Apples <strong>CloudKit Shared Database</strong> mit den eingeladenen Personen geteilt.</p>
+            <h2>5. Geteilte Listen und Orte</h2>
+            <p>Du teilst gezielt eine <strong>einzelne Liste</strong> oder einen <strong>einzelnen Ort</strong> &uuml;ber Apples <strong>CloudKit Shared Database</strong>. Es gibt keinen Modus, der deine gesamte Sammlung freigibt.</p>
             <ul>
                 <li>Die Synchronisation erfolgt End-to-End &uuml;ber Apple iCloud &ndash; nicht &uuml;ber unsere Server</li>
-                <li>Geteilt werden: Name des Orts, Koordinaten, Symbol, Farbe, Kategorie, Notiz, Bewertung, Foto, Aufgaben, Checklisten, Kommentare, Sprachnotizen</li>
-                <li>Live-Pins (Standort teilen mit Label) werden nach 4 Stunden automatisch gel&ouml;scht</li>
-                <li>Wenn du einen Partner trennst, wird die geteilte CloudKit-Zone gel&ouml;scht</li>
-                <li>Bis zu 5 Partner k&ouml;nnen gleichzeitig verbunden sein</li>
+                <li>Geteilt werden: Name des Orts, Koordinaten, Symbol, Farbe, Kategorie, Bewertung, Foto, Aufgaben, Checklisten, Kommentare, Sprachnotizen. Zu einer geteilten Liste reisen die Orte mit, die zu deren Aufgaben geh&ouml;ren &ndash; sonst w&auml;re eine ortsbezogene Aufgabe beim Empf&auml;nger sinnlos</li>
+                <li><strong>Nicht geteilt wird deine pers&ouml;nliche Notiz zu einem Ort</strong> &ndash; die bleibt auf deinem Ger&auml;t</li>
+                <li>Alles, was du nicht ausdr&uuml;cklich teilst, bleibt auf deinem Ger&auml;t</li>
+                <li>Anwesenheit (&bdquo;ist gerade bei REWE&ldquo;) ist freiwillig, wird pro Liste einzeln eingeschaltet und verf&auml;llt nach 30 Minuten</li>
+                <li>Von Hand gesetzte Pins (&bdquo;hier steht das Auto&ldquo;) verfallen nach 4 Stunden und lassen sich jederzeit zur&uuml;cknehmen</li>
+                <li>Nimmst du eine Freigabe zur&uuml;ck, wird die geteilte CloudKit-Zone gel&ouml;scht</li>
             </ul>
-            <p><strong>Pro-Sponsor-Modell:</strong> Wenn du LocaNote Pro abonniert hast, k&ouml;nnen deine eingeladenen Partner alle Pro-Features kostenlos nutzen, solange dein Abo aktiv ist. Beim K&uuml;ndigen verlieren die Partner den Pro-Status wieder.</p>
+            <p><strong>Pro-Sponsoring:</strong> Teilst du mit aktivem LocaNote-Pro-Abo eine Liste, gelten die Pro-Funktionen <em>in dieser Liste</em> auch f&uuml;r die anderen Teilnehmenden. Endet dein Abo, endet das mit.</p>
             <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) &ndash; das Teilen erfordert eine aktive Einladung durch dich.</p>
         </section>
 
@@ -131,7 +135,7 @@
 
         <section>
             <h2>8. Mikrofon &amp; Sprachnotizen</h2>
-            <p>Wenn du eine Sprachnotiz f&uuml;r einen Ort aufnimmst, wird das Audio lokal auf deinem Ger&auml;t aufgenommen und nur lokal gespeichert. Bei aktivem iCloud Sync oder Partner-Modus wird die Audiodatei verschl&uuml;sselt &uuml;ber Apple iCloud synchronisiert.</p>
+            <p>Wenn du eine Sprachnotiz f&uuml;r einen Ort aufnimmst, wird das Audio lokal auf deinem Ger&auml;t aufgenommen und nur lokal gespeichert. Bei aktivem iCloud Sync oder in einer geteilten Liste wird die Audiodatei verschl&uuml;sselt &uuml;ber Apple iCloud synchronisiert.</p>
             <p>Es findet keine Spracherkennung oder serverseitige Verarbeitung statt. Wir hosten keine Sprachdaten.</p>
             <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO).</p>
         </section>
@@ -139,13 +143,19 @@
         <section>
             <h2>9. Externe Dienste</h2>
             <ul>
-                <li><strong>Apple iCloud / CloudKit:</strong> Datensynchronisation, Partner-Modus, geteilte Listen (nur bei aktiver Nutzung)</li>
+                <li><strong>Apple iCloud / CloudKit:</strong> Datensynchronisation, geteilte Listen und Orte (nur bei aktiver Nutzung)</li>
                 <li><strong>Apple WeatherKit:</strong> Wetter-Empfehlungen basierend auf Standort</li>
                 <li><strong>Apple StoreKit:</strong> In-App-K&auml;ufe und Abonnements (LocaNote Pro)</li>
                 <li><strong>Apple MapKit:</strong> Kartendarstellung, POI-Suche, Routing &ndash; vollst&auml;ndig auf Apples Infrastruktur</li>
                 <li><strong>Apple ML / Vision (On-Device):</strong> Lokale Datumserkennung in Aufgabenttexten &ndash; keine Netzwerkkommunikation</li>
+                <li><strong>Apple EventKit (Erinnerungen &amp; Kalender):</strong> Nur lokal auf dem Ger&auml;t, um bestehende Erinnerungen und Termine zu &uuml;bernehmen &ndash; keine Netzwerk&uuml;bertragung durch uns</li>
             </ul>
-            <p><strong>Wir betreiben keine eigenen Server</strong> und nutzen kein eigenes Backend. S&auml;mtliche Cloud-Funktionen laufen &uuml;ber Apple-Infrastruktur. Wir haben keinen Zugriff auf deine Daten.</p>
+            <p>Zwei Dienste au&szlig;erhalb der Apple-Infrastruktur:</p>
+            <ul>
+                <li><strong>OpenStreetMap / Overpass API</strong> (<code>overpass-api.de</code>): &Ouml;ffnungs- und Leerungszeiten zu einem gespeicherten Ort. &Uuml;bertragen wird ausschlie&szlig;lich dessen Koordinate mit 60&nbsp;m Radius &ndash; siehe Abschnitt&nbsp;3. Abschaltbar unter <strong>Mehr &rarr; Datenquellen</strong>. Kartendaten &copy; OpenStreetMap-Mitwirkende, ODbL.</li>
+                <li><strong>Titel eingef&uuml;gter Links:</strong> H&auml;ngst du einer Aufgabe eine Webadresse an, ruft LocaNote diese Seite einmal auf, um ihren Titel zu lesen. Die Anfrage geht an den Betreiber der jeweiligen Seite &ndash; also an das Ziel, das du selbst eingef&uuml;gt hast. Es werden keine Daten von dir mitgesendet.</li>
+            </ul>
+            <p><strong>Wir betreiben keine eigenen Server</strong> und nutzen kein eigenes Backend. Bis auf die beiden genannten Abfragen laufen s&auml;mtliche Cloud-Funktionen &uuml;ber Apple-Infrastruktur. Wir haben keinen Zugriff auf deine Daten.</p>
         </section>
 
         <section>
