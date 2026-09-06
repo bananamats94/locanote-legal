@@ -52,7 +52,7 @@
         <header>
             <div>
                 <h1>Datenschutzerkl&auml;rung</h1>
-                <p>LocaNote &ndash; Stand: August 2026</p>
+                <p>LocaNote &ndash; Stand: September 2026</p>
             </div>
             <button class="toggle" id="toggle">Hell</button>
         </header>
@@ -82,7 +82,7 @@
                 <li><strong>"Immer":</strong> Wird ben&ouml;tigt damit Geofence-Erinnerungen funktionieren wenn die App geschlossen ist (z.B. "Erinnere mich an Milch wenn ich beim Aldi bin")</li>
             </ul>
             <p><strong>Wichtig:</strong> Dein <em>aktueller</em> Standort verl&auml;sst dein Ger&auml;t nicht. Die Geofence-Verarbeitung erfolgt vollst&auml;ndig auf deinem iPhone durch das iOS Location Framework. Wir betreiben keine eigenen Server und empfangen keine Standortdaten.</p>
-            <p><strong>Eine Ausnahme &ndash; &Ouml;ffnungszeiten:</strong> Damit LocaNote &Ouml;ffnungszeiten und Leerungszeiten zu einem Ort anzeigen kann, fragt die App diese bei OpenStreetMap ab. Dabei wird die <em>gespeicherte Koordinate dieses Ortes</em> zusammen mit einem Suchradius von 60&nbsp;Metern an <code>overpass-api.de</code> gesendet. Nicht &uuml;bertragen werden: dein aktueller Standort, der Name des Ortes, deine Aufgaben oder eine Kennung deines Ger&auml;ts. Die IP-Adresse ist f&uuml;r den Server technisch unvermeidbar sichtbar.</p>
+            <p><strong>Eine Ausnahme &ndash; &Ouml;ffnungszeiten:</strong> Damit LocaNote &Ouml;ffnungszeiten und Leerungszeiten zu einem Ort anzeigen kann, fragt die App diese bei OpenStreetMap ab. Dabei wird die <em>gespeicherte Koordinate dieses Ortes</em> zusammen mit einem Suchradius von 60&nbsp;Metern an eine &ouml;ffentliche Overpass-Instanz gesendet (<code>overpass-api.de</code>; antwortet sie nicht, ersatzweise <code>overpass.kumi.systems</code>). Nicht &uuml;bertragen werden: dein aktueller Standort, der Name des Ortes, deine Aufgaben oder eine Kennung deines Ger&auml;ts. Die IP-Adresse ist f&uuml;r den Server technisch unvermeidbar sichtbar.</p>
             <p>Diese Abfrage l&auml;sst sich vollst&auml;ndig abschalten: <strong>Mehr &rarr; Datenquellen</strong>. Danach findet keinerlei Kommunikation mit OpenStreetMap statt; &Ouml;ffnungszeiten k&ouml;nnen weiterhin von Hand eingetragen werden.</p>
             <p><strong>Rechtsgrundlage:</strong> Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) &ndash; du kannst die Berechtigung jederzeit in den iOS-Einstellungen widerrufen.</p>
         </section>
@@ -104,10 +104,18 @@
             <p>Du teilst gezielt eine <strong>einzelne Liste</strong> oder einen <strong>einzelnen Ort</strong> &uuml;ber Apples <strong>CloudKit Shared Database</strong>. Es gibt keinen Modus, der deine gesamte Sammlung freigibt.</p>
             <ul>
                 <li>Die Synchronisation erfolgt End-to-End &uuml;ber Apple iCloud &ndash; nicht &uuml;ber unsere Server</li>
-                <li>Geteilt werden: Name des Orts, Koordinaten, Symbol, Farbe, Kategorie, Bewertung, Foto, Aufgaben, Checklisten, Kommentare, Sprachnotizen. Zu einer geteilten Liste reisen die Orte mit, die zu deren Aufgaben geh&ouml;ren &ndash; sonst w&auml;re eine ortsbezogene Aufgabe beim Empf&auml;nger sinnlos</li>
-                <li><strong>Nicht geteilt wird deine pers&ouml;nliche Notiz zu einem Ort</strong> &ndash; die bleibt auf deinem Ger&auml;t</li>
+                <li>Geteilt werden: Name des Orts, Adresse, Koordinaten, Symbol, Farbe, Kategorie, Bewertung, &Ouml;ffnungszeiten, Aufgaben, Checklisten, Kommentare. Zu einer geteilten Liste reisen die Orte mit, die zu deren Aufgaben geh&ouml;ren &ndash; sonst w&auml;re eine ortsbezogene Aufgabe beim Empf&auml;nger sinnlos</li>
+                <li><strong>Das Foto eines Orts nur, wenn du es f&uuml;r diesen Ort ausdr&uuml;cklich freigibst</strong> (&bdquo;Foto mitteilen&ldquo;, voreingestellt aus). Ein Foto kann Personen zeigen, und was einmal in einer geteilten Zone liegt, l&auml;sst sich nicht zur&uuml;ckholen &ndash; deshalb wandert es nie von selbst mit</li>
+                <li><strong>Gemeinsamer Zettel (&bdquo;F&uuml;r alle&ldquo;):</strong> An einem Ort und in einer Liste kann jede Person einen eigenen Eintrag schreiben. &Uuml;bertragen werden der Text, dein Anzeigename, deine Teilnehmer-Kennung und ein Zeitstempel &ndash; die anderen sehen also, von wem der Eintrag ist und wann er entstand. Ein leerer Text nimmt den Eintrag zur&uuml;ck</li>
+                <li><strong>&bdquo;Klappt nicht&ldquo; und die Antwort darauf:</strong> Meldest du an einer Aufgabe ein Hindernis (&bdquo;Regal war leer&ldquo;), gehen der Text, dein Anzeigename und deine Teilnehmer-Kennung mit. Dasselbe gilt f&uuml;r eine Antwort darauf</li>
+                <li><strong>Vorlagen</strong> und <strong>Wiederholungen</strong> einer Aufgabe reisen mit, ebenso ein an der Aufgabe hinterlegter Link</li>
+                <li><strong>Nicht geteilt werden: deine pers&ouml;nliche Notiz zu einem Ort, deine Sprachnotiz und dein Besuchsverlauf</strong> &ndash; die bleiben auf deinem Ger&auml;t</li>
+                <li>Beim Teilen einer Liste bleiben die Aufgaben, die schon darin standen, <strong>zun&auml;chst privat</strong>. Du gibst sie einzeln frei. Alles, was du danach anlegst, geht automatisch mit</li>
                 <li>Alles, was du nicht ausdr&uuml;cklich teilst, bleibt auf deinem Ger&auml;t</li>
-                <li>Anwesenheit (&bdquo;ist gerade bei REWE&ldquo;) ist freiwillig, wird pro Liste einzeln eingeschaltet und verf&auml;llt nach 30 Minuten</li>
+                <li>Vorlagen (z.&nbsp;B. &bdquo;Wocheneinkauf&ldquo;) reisen nur mit, wenn du sie <em>einzeln</em> dafür freigibst. Voreingestellt ist aus &ndash; eine Vorlage kann pers&ouml;nlich sein. Eine Vorlage, die du von jemandem bekommen hast, bleibt bei dieser Liste und wird nicht an Dritte weitergereicht</li>
+                <li>Anwesenheit (&bdquo;ist gerade bei REWE&ldquo;) ist freiwillig, wird pro Liste einzeln eingeschaltet und verf&auml;llt nach 30 Minuten. &Uuml;bertragen werden dabei: deine Teilnehmer-Kennung, dein Anzeigename, der <em>Name</em> des Orts, die Listen-Kennung und ein Zeitstempel. <strong>Deine Koordinaten verlassen dabei nicht das Ger&auml;t</strong></li>
+                <li><strong>&bdquo;Schaut gerade auf die Liste&ldquo;:</strong> Hast du eine geteilte Liste ge&ouml;ffnet, sehen die anderen Teilnehmenden das, solange die Ansicht offen ist. &Uuml;bertragen werden nur deine Teilnehmer-Kennung, dein Anzeigename und ein Zeitstempel &ndash; <strong>kein Ort und keine Koordinaten</strong>. Der Eintrag verf&auml;llt nach 90&nbsp;Sekunden und wird beim Schlie&szlig;en sofort gel&ouml;scht. Eigener Schalter: &bdquo;Mehr &rarr; Zeigen, wenn ich reinschaue&ldquo;</li>
+                <li><strong>Ankunfts-Mitteilung:</strong> Aus dieser Anwesenheit erzeugt das Ger&auml;t der anderen Person eine Mitteilung (&bdquo;Anna ist gerade bei REWE&ldquo;). Sie erscheint also auf einem fremden Sperrbildschirm, ohne dass die App ge&ouml;ffnet ist. Drei Schalter stehen davor: deine grunds&auml;tzliche Freigabe der Anwesenheit, die Freigabe f&uuml;r diese eine Liste, und der Schalter der empfangenden Person (&bdquo;Melden, wenn jemand ankommt&ldquo;). Die Mitteilung entsteht auf dem Empf&auml;ngerger&auml;t &ndash; wir versenden keine Push-Nachrichten und erfahren nichts davon</li>
                 <li>Von Hand gesetzte Pins (&bdquo;hier steht das Auto&ldquo;) verfallen nach 4 Stunden und lassen sich jederzeit zur&uuml;cknehmen</li>
                 <li>Nimmst du eine Freigabe zur&uuml;ck, wird die geteilte CloudKit-Zone gel&ouml;scht</li>
             </ul>
